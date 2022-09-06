@@ -1,13 +1,88 @@
-.header-wrapper{
+.header-wrapper {
+    --search-border-raius: 92px;
+
     width: 100%;
-    height: 60px;
+    height: var(--default-layout-header-height, 60px);
     box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
     display: flex;
     justify-content: center;
 
-    .inner{
+    .inner {
         height: 100%;
-        width: 1150px;
-        background-color: #777;
+        width: var(--default-layout-width);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+
+        .logo {}
+
+        .search {
+            width: 361px;
+            height: 46px;
+            background-color: rgba(22, 24, 35, 0.06);
+            border-radius: var(--search-border-raius);
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+            border: 1.5px solid transparent;
+            position: relative;
+
+
+            &:focus-within {
+                border: 1.5px solid rgba(22, 24, 35, 0.2);
+            }
+
+            input {
+                height: 100%;
+                font-size: 1.6rem;
+                color: var(--black);
+                border: none;
+                outline: none;
+                background-color: transparent;
+                flex: 1;
+                caret-color: var(--primary);
+
+                &:not(:placeholder-shown)~.search-btn {
+                    color: rgba(22, 24, 35, 0.75)
+                }
+            }
+
+            .search-btn {
+                width: 52px;
+                height: 100%;
+                border: none;
+                outline: none;
+                border-bottom-right-radius: var(--search-border-raius);
+                border-top-right-radius: var(--search-border-raius);
+                cursor: pointer;
+                font-size: 1.8rem;
+                color: rgba(22, 24, 35, 0.34);
+
+                &:hover {
+                    background-color: rgba(22, 24, 35, 0.03);
+                }
+
+                &:active {
+                    background-color: rgba(22, 24, 35, 0.06);
+                }
+            }
+
+            .clear,
+            .loading {
+                color: rgba(22, 24, 35, 0.34);
+                position: absolute;
+                right: 70px;
+                top: 50%;
+                translate: 0 -50%;
+                border: none;
+            }
+
+            .split {
+                width: 1px;
+                height: 28px;
+                background-color: rgba(22, 24, 35, 0.12);
+            }
+        }
     }
 }
