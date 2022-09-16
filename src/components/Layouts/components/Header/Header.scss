@@ -7,6 +7,16 @@
     display: flex;
     justify-content: center;
 
+
+
+    .more-btn{
+        font-size: 2rem;
+        margin-left: 28px;
+        background-color: transparent;
+        border: none;
+        padding: 4px 8px;
+    }
+
     .inner {
         height: 100%;
         width: var(--default-layout-width);

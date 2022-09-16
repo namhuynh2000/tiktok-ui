@@ -1,7 +1,7 @@
 import './Popper.scss'
 
-function Wrapper({ children }) {
-    return (<div className='wrapper'>
+function Wrapper({ children, className }) {
+    return (<div className={`wrapper ${className}`}>
         {children}
     </div>);
 }

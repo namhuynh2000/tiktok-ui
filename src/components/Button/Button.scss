@@ -15,6 +15,8 @@
     cursor: pointer;
     background-color: var(--white);
 
+
+
     +.btn-wrapper {
         margin-left: 8px;
     }
@@ -29,7 +31,11 @@
         margin-left: 8px;
     }
 
-    .icon {}
+    .icon {
+        display: block;
+        width: 24px;
+        text-align: center;
+    }
 }
 
 // Button types
@@ -88,4 +94,12 @@
     min-width: 140px;
     padding: 14px 16px;
 
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
 }

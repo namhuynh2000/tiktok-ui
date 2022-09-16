@@ -73,7 +73,6 @@ function Button({
             {leftIcon && <span className='icon'>{leftIcon}</span>}
             <span className='title'>{children}</span>
             {rightIcon && <span className='icon'>{rightIcon}</span>}
-
         </Comp>
     );
 }
